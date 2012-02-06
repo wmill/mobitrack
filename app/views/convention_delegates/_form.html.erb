@@ -1,0 +1,33 @@
+<%= form_for(@convention_delegate) do |f| %>
+  <% if @convention_delegate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@convention_delegate.errors.count, "error") %> prohibited this convention_delegate from being saved:</h2>
+
+      <ul>
+      <% @convention_delegate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :riding %><br />
+    <%= f.text_field :riding %>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br />
+    <%= f.text_field :score %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

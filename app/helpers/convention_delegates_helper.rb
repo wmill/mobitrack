@@ -1,0 +1,2 @@
+module ConventionDelegatesHelper
+end

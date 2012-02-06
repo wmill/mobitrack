@@ -1,0 +1,29 @@
+<h1>Listing convention_delegates</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Riding</th>
+    <th>Score</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @convention_delegates.each do |convention_delegate| %>
+  <tr>
+    <td><%= convention_delegate.first_name %></td>
+    <td><%= convention_delegate.last_name %></td>
+    <td><%= convention_delegate.riding %></td>
+    <td><%= convention_delegate.score %></td>
+    <td><%= link_to 'Show', convention_delegate %></td>
+    <td><%= link_to 'Edit', edit_convention_delegate_path(convention_delegate) %></td>
+    <td><%= link_to 'Destroy', convention_delegate, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Convention delegate', new_convention_delegate_path %>

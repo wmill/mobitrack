@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Convention delegate:</b>
+  <%= @observation.convention_delegate %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @observation.user %>
+</p>
+
+<p>
+  <b>Ip address:</b>
+  <%= @observation.ip_address %>
+</p>
+
+<p>
+  <b>User agent:</b>
+  <%= @observation.user_agent %>
+</p>
+
+<p>
+  <b>Created:</b>
+  <%= @observation.created %>
+</p>
+
+
+<%= link_to 'Edit', edit_observation_path(@observation) %> |
+<%= link_to 'Back', observations_path %>

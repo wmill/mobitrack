@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  convention_delegate: 
+  user: 
+  ip_address: MyString
+  user_agent: MyString
+  created: 2012-02-05 17:24:30
+
+two:
+  convention_delegate: 
+  user: 
+  ip_address: MyString
+  user_agent: MyString
+  created: 2012-02-05 17:24:30

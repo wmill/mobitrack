@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20120205222438) do
     t.integer  "user_id"
     t.string   "ip_address"
     t.string   "user_agent"
-    t.datetime "created"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

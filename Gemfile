@@ -27,6 +27,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem 'authlogic'
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false

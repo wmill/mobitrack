@@ -1,18 +1,14 @@
 <h1>Listing convention_delegates</h1>
 
 
-<ul data-role="listview" data-inset="true" data-filter="true">
+<ul data-role="listview" data-inset="true" data-filter="true" id='delegate_list'>
 <% @convention_delegates.each do |convention_delegate| %>
   <li>
-    <a href='<%= url_for convention_delegate %>'>
+  <a href='<%= url_for(:action => 'show', :id => convention_delegate.id ) %>'>
     <%= convention_delegate.first_name %>
-    <%= convention_delegate.last_name %>
+    <%= convention_delegate.last_name %> -- 
     <%= convention_delegate.riding %>
     </a>
   </li>
 <% end %>
 </ul>
-
-<br />
-
-<%= link_to 'New Convention delegate', new_convention_delegate_path %>

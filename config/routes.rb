@@ -1,5 +1,9 @@
 Testsite2::Application.routes.draw do
-  get "mobile/index"
+  #get "mobile/index"
+
+  match '/mobile/', :controller => 'mobile', :action => 'index'
+  match '/mobile/:id', :controller => 'mobile', :action => 'show'
+  match '/mobile/:id/observe', :controller => 'mobile', :action => 'observe'
 
   get "sessions/new"
 

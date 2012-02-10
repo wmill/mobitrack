@@ -1,4 +1,6 @@
 Testsite2::Application.routes.draw do
+  get "mobile/index"
+
   get "sessions/new"
 
   resources :users

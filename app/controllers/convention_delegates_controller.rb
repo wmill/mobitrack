@@ -10,6 +10,17 @@ class ConventionDelegatesController < ApplicationController
     end
   end
 
+  # GET /convention_delegates/index_mobile
+  # GET /convention_delegates/index_mobile.json
+  def index_mobile
+    @convention_delegates = ConventionDelegate.all
+
+    respond_to do |format|
+      format.html # index_mobile.html.erb
+      format.json { render json: @convention_delegates }
+    end
+  end
+
   # GET /convention_delegates/1
   # GET /convention_delegates/1.json
   def show

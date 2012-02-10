@@ -5,4 +5,4 @@ require File.expand_path('../application', __FILE__)
 Testsite2::Application.initialize!
 
 # config/environment.rb
-config.gem "authlogic"
+#config.gem "authlogic"

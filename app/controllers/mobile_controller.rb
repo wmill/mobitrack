@@ -37,8 +37,8 @@ class MobileController < ApplicationController
     } 
 
     respond_to do |format|
-      if @convention_delegate.update_attributes(params[:convention_delegate])
-        format.html { redirect_to @convention_delegate, notice: 'Convention delegate was successfully updated.' }
+      if @obeservation.update_attributes(observation_data)
+        format.html { redirect_to @observation, notice: 'Observation was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

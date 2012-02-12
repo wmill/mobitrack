@@ -1,0 +1,31 @@
+<%= form_for(@observaion) do |f| %>
+  <% if @observation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@observation.errors.count, "error") %> prohibited this observation from being saved:</h2>
+
+      <ul>
+      <% @observation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <%
+        print @convention_delegate.first_name
+        print @convention_delegate.last_name
+        print @convention_delegate.riding
+    %>
+  <div class="field">
+    <fieldset data-role="controlgroup">
+        <legend>Support Level</legend>
+
+        <%= f.label :value %><br />
+        <%= f.radio_button :value, 1 %>1
+        <%= f.radio_button :value, 2 %>2
+        <%= f.radio_button :value, 3 %>3
+        <%= f.radio_button :value, 4 %>4
+        <%= f.radio_button :value, 5 %>5
+    </fieldset>
+  </div>
+<% end %>

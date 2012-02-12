@@ -5,7 +5,7 @@ class CreateObservations < ActiveRecord::Migration
       t.references :user
       t.string :ip_address
       t.string :user_agent
-
+      t.integer :value
 
       t.timestamps
     end

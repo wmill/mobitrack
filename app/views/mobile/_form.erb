@@ -1,20 +1,10 @@
-<%= form_for(@observaion) do |f| %>
-  <% if @observation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@observation.errors.count, "error") %> prohibited this observation from being saved:</h2>
-
-      <ul>
-      <% @observation.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+<%= form_tag(:controller => 'mobile', 
+             :convention_delegate => @convention_delegate,
+             :action => 'observe') %>  
     <%
-        print @convention_delegate.first_name
-        print @convention_delegate.last_name
-        print @convention_delegate.riding
+        puts @convention_delegate.first_name
+        puts @convention_delegate.last_name
+        puts @convention_delegate.riding
     %>
   <div class="field">
     <fieldset data-role="controlgroup">

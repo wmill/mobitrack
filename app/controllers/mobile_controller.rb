@@ -37,7 +37,7 @@ class MobileController < ApplicationController
     } 
 
     respond_to do |format|
-      if @obeservation.update_attributes(observation_data)
+      if @obeservation.new(observation_data)
         format.html { redirect_to @observation, notice: 'Observation was successfully updated.' }
         format.json { head :ok }
       else

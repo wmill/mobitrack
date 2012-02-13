@@ -4,9 +4,10 @@ Testsite2::Application.routes.draw do
   match '/mobile/', :controller => 'mobile', :action => 'index'
   match '/mobile/:id', :controller => 'mobile', :action => 'show'
   match '/mobile/:id/observe', :controller => 'mobile', :action => 'observe'
+  match '/mobile/:id/create_observation', :controller => 'mobile', :action => 'create_observation'
 
   get "sessions/new"
-
+  
   resources :users
 
   resources :convention_delegates

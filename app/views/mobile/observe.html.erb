@@ -1,0 +1,28 @@
+<h1>Observe &amp; Report</h1>
+
+<%= form_tag(:controller => 'mobile', :action => 'create_observation') do %>  
+    
+    <%= @convention_delegate.first_name %>
+    <%= @convention_delegate.last_name %>
+    <%=  @convention_delegate.riding %>
+    
+  <div class="field">
+    <fieldset data-role="controlgroup">
+        <legend>Support Level</legend>
+
+        <%= radio_button "observation", :value, 1 %>
+        <%= label_tag 'observation_value_1' , "1 - \u{263A}"%>
+        <%= radio_button "observation", :value, 2 %>
+        <%= label_tag 'observation_value_2' , '2'%>
+        <%= radio_button "observation", :value, 3 %>
+        <%= label_tag 'observation_value_3' , "3 - \u{1F62A}"%>
+        <%= radio_button "observation", :value, 4 %>
+        <%= label_tag 'observation_value_4' , '4'%>
+        <%= radio_button "observation", :value, 5 %>
+        <%= label_tag 'observation_value_5' , "5 - \u{2639}"%>
+    </fieldset>
+    <%= submit_tag("Submit") %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', mobile_path %>

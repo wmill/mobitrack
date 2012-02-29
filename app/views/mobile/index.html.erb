@@ -4,7 +4,7 @@
 <ul data-role="listview" data-inset="true" data-filter="true" id='delegate_list'>
 <% @convention_delegates.each do |convention_delegate| %>
   <li>
-  <a href='<%= url_for(:action => 'show', :id => convention_delegate.id ) %>'>
+  <a href='<%= url_for(:action => 'observe', :id => convention_delegate.id ) %>'>
     <%= convention_delegate.first_name %>
     <%= convention_delegate.last_name %> -- 
     <%= convention_delegate.riding %>

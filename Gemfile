@@ -27,9 +27,14 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'authlogic'
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem "nifty-generators", :group => :development
+
+gem 'rspec-rails', '>= 2.0.1'
+gem "bcrypt-ruby", :require => "bcrypt"
+gem "mocha", :group => :test
